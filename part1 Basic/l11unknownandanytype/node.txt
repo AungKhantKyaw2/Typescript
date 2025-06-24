@@ -1,0 +1,11 @@
+=>
+
+tsc --init
+
+uncoment "rootDir" : "./src"
+uncomment "outDir" : "./dust"
+uncoment  "removeComments":true,
+uncoment  "noEmitOnError" : true,
+
+=>build
+tsc -w (this will output js file to dist)
