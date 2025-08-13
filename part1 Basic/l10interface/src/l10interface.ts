@@ -103,6 +103,7 @@ interface Staff extends Task{
      name:string,
      hobbies:string[],
      gethobbies():string[];
+    
 
 
 }

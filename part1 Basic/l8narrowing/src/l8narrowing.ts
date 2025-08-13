@@ -59,5 +59,6 @@ let topic:News = post;
 console.log(topic);//{ title: 'New Post One',content: 'This is new post', public: true, user_id: 1}
 console.log(topic.title);//New Post One
 // console.log(topic.content);//error
+//  console.log(topic.user_id);//error
 
 //9NW

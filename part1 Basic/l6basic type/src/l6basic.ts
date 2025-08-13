@@ -106,9 +106,9 @@ console.log(student);//{ name: 'Aung Aung', gender: 'male', age: 25 }
 //=> Recursive Type
 
 type NestedArray= number | NestedArray[];
-// let numberarrs:NestedArray= [10,20];
+let numberarrs:NestedArray= [10,20];
 // let numberarrs:NestedArray= [10,20,[30,40]];
-let numberarrs:NestedArray= [10,20,[30,40,[500,600]]];
+// let numberarrs:NestedArray= [10,20,[30,40,[500,600]]];
 console.log(numberarrs);//[ 10, 20, [ 30, 40, [ 500, 600 ] ] ]
 
 //=> Type Assertion 

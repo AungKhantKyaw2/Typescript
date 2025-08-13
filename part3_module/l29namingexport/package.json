@@ -1,0 +1,15 @@
+{
+  "name": "l29namingexport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node node_modules/esmodules-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "esmodules-dev-server": "^0.0.4",
+    "typescript": "^5.9.2"
+  }
+}

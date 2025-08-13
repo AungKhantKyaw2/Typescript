@@ -1,0 +1,62 @@
+npm init (continue enter)
+
+
+
+npm install typescript --save-dev
+
+create folder(src)
+create folder(dist)
+
+create index.html
+
+tsc --init
+
+edit tsconfig.json =>
+
+{
+  "compilerOptions": {
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "ES6",                                /* Specify what module code is generated. */
+    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
+    "removeComments": true,                           /* Disable emitting comments. */
+     "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */                 
+   "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "skipLibCheck": true,                               /* Skip type checking all .d.ts files. */
+  "noUnusedParameters": true,
+  "noUnusedLocals": true,
+  "strictNullChecks":true
+  }
+}
+
+
+
+npm install esmodules-dev-server --save-dev
+
+
+=> edit package.json
+
+
+{
+  "name": "l29namingexport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node node_modules/esmodules-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "esmodules-dev-server": "^0.0.4",
+    "typescript": "^5.9.2"
+  }
+}
+
+
+=>build 
+tsc -w 
+
+npm run serve
