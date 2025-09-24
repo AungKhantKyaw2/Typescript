@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const UserService_1 = require("./services/UserService");
+const contact = new UserService_1.UserService();
+console.log(contact.createUser("Hnin Hnin", "hninhnin@mail.com", "0123456789"));
+console.log(contact.createUser("Hnin Myat", "hninhnin@mail.com", "0123456789"));
+console.log(contact.createUser("Kyaw Kyaw", "kyaw kyaw@mail.com", "0123456789"));
+console.log("\n -_-_-_-_-_ \n");
+console.log("All Users : ", contact.getAllUsers());
+console.log("\n -_-_-_-_-_ \n");
+console.log(contact.updateUser(1, { email: "hninhnin@gmail.com" }));
+console.log("\n -_-_-_-_-_ \n");
+console.log(contact.deleteUser(1));
+console.log("All users after delete:", contact.getAllUsers());
