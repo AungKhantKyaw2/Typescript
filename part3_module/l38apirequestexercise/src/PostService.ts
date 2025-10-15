@@ -46,7 +46,18 @@ export class PostService{
             const response = await this.api.post<Post>('/posts',newPost);
             return response.data;
         }
-}
+        //updaate post
+
+        async updatePost(id:number,updatePost:Partial<Omit<Post,"id">>):Promise<Post>{
+            const response = await this.api.put<Post>(`/posts/${id}`,updatePost);
+            return response.data;
+        }
+
+        async deletepost(id:number):Promise<string>{
+            await this.api.delete(`/posts/${id}`);
+            return `Post with ID ${id} deleted successfully`;
+        }
+}   
 
 
 // interface Post{
@@ -58,12 +69,25 @@ export class PostService{
 
 // type PostwithoutId = omit<Post,"id">;
 
+//Omit
 // interface Post{
 //  
 //     userId:number;
 //     title:string;
 //     body:string;
 // }
+
+//=> partial + Omit 
+
+
+// interface Post{
+//     
+//     userId?:number;
+//     title?:string;
+//     body?:string;
+// }
+
+
 
 
 //1PS

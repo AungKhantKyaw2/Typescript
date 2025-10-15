@@ -28,6 +28,14 @@ function main() {
                 body: "This is a test post created with Axios."
             });
             console.log("created post successfully", newpost);
+            console.log("\n\n Upadting a new post");
+            const editpost = yield postserviceObj.updatePost(10, {
+                title: "My New Post 1"
+            });
+            console.log("Update Post successfully : ", editpost);
+            console.log("\n\n Deleting a post");
+            const message = yield postserviceObj.deletepost(1);
+            console.log(message);
         }
         catch (err) {
             console.error("Error :", err.message);

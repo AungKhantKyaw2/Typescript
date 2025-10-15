@@ -1,0 +1,24 @@
+npm init -y
+npm install typescript --save-dev
+
+npx tsc --init
+
+=> create src > index.ts
+
+
+-------------------------------
+=>axios
+
+https://www.npmjs.com/package/axios
+npm i axios
+
+import axios from "axios";
+----------------------------------
+
+-------------------------------
+=>node-fetch 3.3.2
+https://www.npmjs.com/package/node-fetch
+npm i node-fetch
+
+import axios from "axios";
+----------------------------------
