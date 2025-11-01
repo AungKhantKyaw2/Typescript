@@ -25,8 +25,8 @@ export class PostService{
             // return response.json();
 
 
-            const data = (await response.json()) as Post[];
-            return data;
+            const datas = (await response.json()) as Post[];
+            return datas;
         }
 
 

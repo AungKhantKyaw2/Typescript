@@ -22,3 +22,12 @@ npm i node-fetch
 
 import axios from "axios";
 ----------------------------------
+
+
+=> install firebase (v 12.40)
+
+console > project overview > Project settings
+
+
+npm install firebase
+----------------------------------
