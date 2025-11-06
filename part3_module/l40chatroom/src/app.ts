@@ -86,13 +86,13 @@ newnameform.addEventListener('submit',(e:Event)=>{
     if(!newname) return;
 
     // method 1
-    // chatroomObj.updateName(newname);
-    // newnameform.reset();
+    chatroomObj.updateName(newname);
+    newnameform.reset();
 
     // method 2
-    chatroomObj.updateName(newname)
-        .then(()=>newnameform.reset())
-        .catch(err=>console.log(err));
+    // chatroomObj.updateName(newname)
+    //     .then(()=>newnameform.reset())
+    //     .catch(err=>console.log(err));
 
     updatemsg.innerText = `Your name was update to ${newname}`;
     setTimeout(()=>updatemsg.innerText='',3000);
@@ -100,6 +100,12 @@ newnameform.addEventListener('submit',(e:Event)=>{
 
 
 
+
+
+
+// npm run webpack
+// npm run dev
+// npm run watch 
 
 
 

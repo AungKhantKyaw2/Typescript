@@ -1,8 +1,8 @@
-import {db} from "./firebaseconfig";
-import {collection,addDoc,onSnapshot,Timestamp,query,where} from "firebase/firestore";
+import {db} from "./firebaseConfig";
+import {collection,addDoc,onSnapshot,Timestamp,query,where, Unsubscribe, orderBy} from "firebase/firestore";
 
 
-interface chatMessage{
+export interface chatMessage{
     message:string,
     username:string,
     room:string;
@@ -12,7 +12,8 @@ interface chatMessage{
 export class Chatroom{
     private room:string;
     private username:string;
-    private unsubscribe:null = null;
+    // private unsubscribe:null | (()=>void) = null;
+    private unsubscribe:null |  Unsubscribe = null;
     
     private chats = collection(db,"chats");
 
@@ -52,7 +53,7 @@ export class Chatroom{
     // get chat messages  ************
     getChats(callback:(data:chatMessage)=>void):void{
 
-        const qry = query(this.chats,where('room',"==",this.room));
+        const qry = query(this.chats,where('room',"==",this.room),orderBy('createdAt'));
 
         this.unsubscribe = onSnapshot(qry,(docSnap:any)=>{
 
@@ -102,3 +103,14 @@ export class Chatroom{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+//5WP

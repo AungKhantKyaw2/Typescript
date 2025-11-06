@@ -70,7 +70,15 @@
 .time{
     font-size: 11px;
     color:#aaa;
+    margin-top: 4px;
     margin-left: 5px;
+
+
+
+}
+.group{
+    display: flex;
+    justify-content: space-between;
 }
 
 
