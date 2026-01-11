@@ -1,0 +1,118 @@
+npm init -y
+npm install typescript --save-dev
+
+npx tsc --init
+
+=> create src > index.ts
+
+
+-------------------------------
+=>axios
+
+https://www.npmjs.com/package/axios
+npm i axios
+
+import axios from "axios";
+----------------------------------
+
+-------------------------------
+=>node-fetch 3.3.2
+https://www.npmjs.com/package/node-fetch
+npm i node-fetch
+
+import axios from "axios";
+----------------------------------
+
+
+=>Webpack(version 5)
+
+(i) Install (Webpack 5)
+https://webpack.js.org/ > Documentation  > Guides > Getting Started (Basic Setup) > npm install webpack webpack-cli --save-dev
+https://webpack.js.org/ > Documentation  > Guides  > Development > Using webpack-dev-server > npm install --save-dev webpack-dev-server
+https://webpack.js.org/ > Documentation  > Guides  > TypeScript > npm install --save-dev typescript ts-loader
+
+
+(ii) Create webpack.config.js
+
+https://webpack.js.org/ > Documentation  > Guides  > TypeScript >(webpack.config.ts)
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.ts',
+   mode: 'development',  //development or production , add this line from (https://webpack.js.org/ > Documentation  > Configuration >Mode >Usage >)
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'), // change to public
+  },
+};
+
+(iii) add devServer config to webpack.config.js
+
+https://webpack.js.org/ > Documentation  > Configuration > Dev Server
+
+
+devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    compress: true,
+    port: 9000,
+  },
+
+(iv) config package.json
+"watch" :"tsc -w",
+"webpack":"webpack", //optional
+"dev":"webpack serve" //optional
+
+(v) create public folder 
+(vi) create file public > index.html
+(vii) <script src="./bundle.js"></script>
+
+
+=>build
+
+npm run webpack
+npm run dev
+npm run watch 
+-------------------------------------
+
+
+=> install firebase (v 12.40)
+
+console > project overview > Project settings
+
+
+npm install firebase
+----------------------------------
+
+npm install date-fns --save
+------------------------------------
+
+=> DEPLOY ON RENDER.com
+
+new > Static Site
+
+new > Static Site
+public Directory = ./
+
+=> Give domain access
+
+Firebase > Authentication > Settings >Authorized domain > add your domain eg:
+
+---------------------------------------------------------------------
+
+
+//17CR
+

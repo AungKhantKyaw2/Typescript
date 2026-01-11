@@ -1,0 +1,76 @@
+https://firebase.google.com
+
+Click to Go to console > Get started >  Create a new Firebase project 
+Project Name = ES6 Chatroom Project
+Click Continue
+
+
+Enable Gemini in Firebase  = unchecked
+Click Continue
+
+Enable Google Analytics for this project = Uncheck 
+Click Create Project > Continue  > Continue
+
+
+
+----------------------------------------------
+
+
+=> Register An App For Web 
+
+
+  => Config API key for Firebase SDK Code ( Software Development Kit)
+
+    Click "Project overview" > Project settings > General > click "web icon" 
+
+    Register app > App nickname = chatroomapp
+                  Also set up Firebase Hosting for this app = uncheck
+                  click "Register app" > click "Continue to console"
+
+
+----------------------------------------------
+
+=> Get Firebase SDK Code ( Software Development Kit)
+
+  Click "Project overview" > Project settings > General > Your apps > CDN >you can see your app codes
+
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyChTt1NeUUJR30ET5PpsHb3480L-TS_dSY",
+      authDomain: "es6-chatroom-project.firebaseapp.com",
+      projectId: "es6-chatroom-project",
+      storageBucket: "es6-chatroom-project.firebasestorage.app",
+      messagingSenderId: "811549271849",
+      appId: "1:811549271849:web:1650bc0f87ee106ac83938"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+
+----------------------------------------------
+
+  => Create Database 
+    Build > Firestore Database > Create Database 
+     (i) Select edition > Standard edition > click "Next"
+     (ii) Database ID & location
+            Database ID = (default)
+            Location = asia-southeast1 (Singapore)  > click "Next"
+    (iii) Configure > Start in production mode > click "Create"
+
+
+  => Error for writing (PERMISSION_DENIED)
+    Build > Firestore Database > Rules > allow read, write: if true; > click "Publish"
+  
+
+----------------------------------------------
+
+
