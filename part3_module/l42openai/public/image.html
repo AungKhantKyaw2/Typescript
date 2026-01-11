@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"  />
+        <title>TypeScript Image Generate</title>
+        <link href="" rel="icon" type="image/png" />
+ 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <link href="" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+
+
+            <!-- start navbar  -->
+            <nav class="navbar">
+                <div class="container-md">
+                    <span class="text-secondary small">
+                        Full version. <br/>
+                        Image generation is allowed.
+                    </span>
+                </div>
+             </nav>
+            <!-- end navbar  -->
+
+        <div class="container mt-1">
+
+            <!-- Error Message  -->
+            <!-- {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endif %} -->
+            
+            <div class="card border-0 text-center mb-3">
+                <div class="container py-3">
+
+                    <div class="col-sm-6 col-md-4 mx-auto">
+
+                        <div class="card" style="border-radius:15px;">
+
+                            <div class="card-header bg-info text-white border-bottom-0 d-flex justify-content-between align-items-center p-3" style="border-top-left-radius:15px; border-top-right-radius:15px;">
+                                <a href="/"><i class="fas fa-angle-left"></i> Text</a>
+                                <span class="fw-bold">TypeScript Image</span>
+                                <a href="javascript:void(0);" id="clear-history"><i class="fas fa-times"></i> x</a>
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="boticon"></div>
+
+                                <div id="displaybox" class="border-0 displaybox">
+
+                                    <!-- {% if data %}
+
+                                        <img src="{{ data }}" class="responseimg" alt="Generated Image" onload="hideloading()" onerror="handleimageerror()"  />
+                                        <span id="image-error" class="text-danger" style="display:none;" >Failed to load image</span>
+
+                                    {% else %}
+                                        <small class="text-muted">No image available.</small>
+                                    {% endif %} -->
+
+                                    <!-- After websocket -->
+                                    <!-- new img will come from js  -->
+
+                                </div>
+
+                                <div >
+                                    <form id="form" action="" method="POST">
+                                        <div class="form-group">
+                                            <textarea name="userinput" id="userinput" class="form-control" placeholder="Describe an image" rows="4" maxlength="100"></textarea>
+                                        </div>
+                                        <div class="d-grid mt-2">
+                                            <button type="submit" id="send-btn" class="btn btn-primary rounded-0">Send <i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- start loading  -->
+            <div id="loading-spinner">
+                <div class="spinner-border"></div>
+            </div>
+            <!-- end loading  -->
+
+
+        </div>
+
+
+<!-- show hide loading  -->
+<!-- <script>
+    // show loading when form is submitted
+    document.getElementById("form").addEventListener('submit',function(){
+        document.getElementById("loading-spinner").style.display = "block";
+    });
+
+    // hide loading when image loads successfully
+    function hideloading(){
+        document.getElementById("loading-spinner").style.display = "none";
+    }
+
+    // hide loading when image failed to load
+    function handleimageerror(){
+        document.getElementById("loading-spinner").style.display = "none";
+        document.getElementById("image-error").style.display = "block";
+        
+    }
+</script> -->
+
+
+                <script src="" type="text/javascript"></script>
+
+
+    </body>
+</html>
