@@ -18,3 +18,64 @@
   "strictNullChecks":true
   }
 }
+
+
+
+
+
+
+
+
+
+//package.json
+
+// "buildclient":"webpack --config webpack.config.js --mode=development",
+// src-client/app.ts , src-client/appimg.ts -> compile to dist/app.js  , dist/appimg.js
+
+// "buildserver":"tsc -p tsconfig.server.json",
+// src-server/server.ts , src-client/openaiClient.ts -> compile to dist-server/server.js  , dist-server/openaiClient.js
+
+
+// "build:":"npm run build:client && npm run build:server",
+// && mean command 1 run > command 2run
+//npm run build
+
+// "dev:client":"webpack --config webpack.config.js --watch  --mode=development",
+// --watch mean = code change -> auto rebuild
+// edit  TS -> webpack watch -> auto rebuild JS
+
+
+// "dev:server":"node --watch dist-server/server.js",
+//--watch means = Node auto restart 
+//Edit dist-server/server.js  -> node server restart auto
+
+
+
+// "dev:":"npm run build  && npm run dev:server",
+// npm run dev
+
+// "start": "node  dist-server/server.js"
+//dist-server/server.js execute
+
+//option 1 (for dev)
+//npm run dev
+//npm run start 
+
+//option 2 (for product)
+//npm run build
+//npm run start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

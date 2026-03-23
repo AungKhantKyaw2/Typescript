@@ -2,13 +2,9 @@ const path = require('path');
 
 module.exports = {
   entry:{
-     app:'./src/app.ts',
-     authcheck:'./src/authcheck.ts',
-     authsignin:'./src/authsignin.ts',
-     authsignup:'./src/authsignup.ts',
-     Authorize:'./src/Authorize.ts',
-     authresetpassword:'./src/authresetpassword.ts',
-     authprofile:'./src/authprofile.ts',
+     app:'./src-client/app.ts',
+     appimg:'./src-client/appimg.ts',
+   
 
   },
    mode: 'development',  //development or production , add this line from (https://webpack.js.org/ > Documentation  > Configuration >Mode >Usage >)
@@ -29,12 +25,12 @@ module.exports = {
   },
   output: {
     filename:'[name].js', //eg. app.js, authcheck.js...
-    path: path.resolve(__dirname, 'dist'), // change to public
+    path: path.resolve(__dirname, 'public/static'), // change to public
   },
   
     devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'public'),
     },
     compress: true,
     port: 9000,
